@@ -1,0 +1,188 @@
+{% extends "siteapp/base.html" %}
+
+{% block content %}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Smart Game Scheduling Platform</h1>
+      <p class="lead">Stop drowning in group chats. Tell your friends when you are free and which games you want to play — the AI scheduling engine finds overlapping time, matches players, and notifies everyone when a session is on.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#register">Join the waitlist</a>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
+      </div>
+      <p class="badge-pst">PST / Pacific Time</p>
+    </div>
+    <aside class="hero-card" aria-labelledby="quick-flow">
+      <h2 id="quick-flow">At a glance</h2>
+      <ol class="step-list">
+        <li>
+          <span class="step-num" aria-hidden="true">1</span>
+          <div><strong>Input</strong> — Share availability and game choices in a secure form.</div>
+        </li>
+        <li>
+          <span class="step-num" aria-hidden="true">2</span>
+          <div><strong>Match</strong> — The engine finds overlaps, preferences, and player counts.</div>
+        </li>
+        <li>
+          <span class="step-num" aria-hidden="true">3</span>
+          <div><strong>Play</strong> — Sessions are scheduled automatically; everyone gets notified.</div>
+        </li>
+      </ol>
+    </aside>
+  </div>
+</section>
+
+<section id="overview">
+  <div class="wrap">
+    <h2>Overview</h2>
+    <p class="p-muted">This platform removes the chaos of planning hangouts, coordinating schedules, and figuring out who is free when. It is built for fun and social connection — so you spend more time playing and zero time herding cats in chat.</p>
+    <p class="p-muted">Instead of manual texts, calendar checks, and slow replies, users submit availability once. The system does the rest.</p>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="p-muted">The platform acts as an intelligent scheduling assistant.</p>
+    <div class="grid-2">
+      <div class="card">
+        <h3>1. User input</h3>
+        <ul>
+          <li>Simple form for available time slots</li>
+          <li>Private, secure availability</li>
+          <li>Select games you want to play</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>2. AI scheduling engine</h3>
+        <ul>
+          <li>Analyzes all submitted schedules</li>
+          <li>Finds overlapping free time</li>
+          <li>Matches on availability, game prefs, headcount, and duration</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>3. Automatic sessions</h3>
+        <ul>
+          <li>When enough players align, a session is scheduled</li>
+          <li>Everyone is notified of confirmed times</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>4. Time standardization</h3>
+        <ul>
+          <li>Scheduling is handled in PST (Pacific) for consistency</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="registration">
+  <div class="wrap">
+    <h2>Registration &amp; onboarding</h2>
+    <p class="p-muted">Users register with email. During onboarding they enter available slots (by day and time), pick games they care about, and build a profile that improves future matchmaking and scheduling accuracy.</p>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <h2>System features</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Game database</h3>
+        <ul>
+          <li>Duration (e.g. 30 minutes, 1 hour)</li>
+          <li>Minimum players required</li>
+          <li>Optional maximum player limit</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Smart scheduling logic</h3>
+        <ul>
+          <li>Session only when enough players are free</li>
+          <li>Time slots must cover the full required duration</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Admin controls</h3>
+        <ul>
+          <li>Add and update games</li>
+          <li>Adjust details and system-wide scheduling rules</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Why this matters</h2>
+    <p class="p-muted">Planning events — even simple game nights — is hard. School, work, and life get in the way, and aligning schedules turns into a frustrating back-and-forth. This platform removes that friction so coordination does not eat the fun.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Why use this</h2>
+    <p class="p-muted">Calendars and generic schedulers are not built for this kind of social play. Here is what makes this different:</p>
+    <div class="feature-list">
+      <div class="feature">
+        <strong>Purpose-built for fun</strong>
+        <span>Connection and enjoyment, not just productivity.</span>
+      </div>
+      <div class="feature">
+        <strong>Social by design</strong>
+        <span>Meet, reconnect, and spend time together without the effort tax.</span>
+      </div>
+      <div class="feature">
+        <strong>AI-powered matching</strong>
+        <span>No manual coordination — the system finds strong matches for you.</span>
+      </div>
+      <div class="feature">
+        <strong>Effortless planning</strong>
+        <span>Set availability once; the engine keeps working for you.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Future potential</h2>
+    <p class="p-muted">Ideas for expansion: AI game recommendations from behavior, skill-based matchmaking, Discord or messaging integrations, real-time reminders, and cross-timezone support.</p>
+  </div>
+</section>
+
+<section id="register" class="form-section">
+  <div class="wrap">
+    <h2>Get started</h2>
+    <p class="p-muted">This demo form does not store data yet — wire it to your backend when you are ready. Share your email and interests to show how onboarding would feel.</p>
+    {% if interest_submitted %}
+    <p class="alert-success" role="status">Thanks — we received your interest. (Demo: nothing was saved.)</p>
+    {% endif %}
+    <div class="form-box">
+      <form method="post" action="{% url 'home' %}#register">
+        {% csrf_token %}
+        {% if form.non_field_errors %}
+        <div class="form-errors">{{ form.non_field_errors }}</div>
+        {% endif %}
+        <div>
+          <label for="id_email">{{ form.email.label }}</label>
+          {{ form.email }}
+          {% if form.email.errors %}<div class="form-errors">{{ form.email.errors }}</div>{% endif %}
+        </div>
+        <div>
+          <label for="id_games">{{ form.games.label }}</label>
+          {{ form.games }}
+        </div>
+        <div>
+          <label for="id_availability_note">{{ form.availability_note.label }}</label>
+          {{ form.availability_note }}
+        </div>
+        <button class="btn btn-primary" type="submit">Submit interest</button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}
